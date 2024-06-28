@@ -6,7 +6,6 @@ import BookIcon from "../../assets/images/Morepage/book.svg"
 import RightArrow from "../../assets/images/Morepage/rightarrow.svg"
 import PencilIcon from "../../assets/images/Morepage/pencil.svg"
 import Iicon from "../../assets/images/Morepage/iIcon.svg"
-import FAQs from "../../components/Morepage/FAQs"
 import { useNavigation } from '@react-navigation/native';
 import Profile from '../../components/Morepage/Profile'
 
@@ -21,7 +20,7 @@ const More = () => {
 	
 	  }) 
   return (
-    <>
+    <>  
       <ScrollView style={styles.backGround}>
 		
 			<SafeAreaView>

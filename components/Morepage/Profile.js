@@ -16,7 +16,6 @@ import UPIicon from "../../assets/images/Morepage/UPIicon.svg";
 import AddressIcon from "../../assets/images/Morepage/adderssIcon.svg";
 import SettingIcon from "../../assets/images/Morepage/settingIcon.svg";
 import { useNavigation } from "@react-navigation/native";
-import Addresses from "../../screens/Morepages/Addresses";
 
 const Profile = () => {
   const navigation = useNavigation();
