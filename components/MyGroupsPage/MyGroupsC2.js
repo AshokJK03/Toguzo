@@ -62,7 +62,7 @@ const MyGroupsC2 = () => {
             <Text style={styles.productInfo}>Size: XL | Qty: 1</Text>
           </View>
           <View style={{width: 40, height: 40, justifyContent: "center", marginLeft: 16, left:15}}>
-            <ArrowPR />
+            <ArrowPR style={styles.abc}/>
           </View>
         </View>
         <Text
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 12,
     backgroundColor: "#fff",
-    width: 360,
+    width: 400,
     
   },
   header: {
@@ -141,7 +141,8 @@ const styles = StyleSheet.create({
     borderRadius:20,
     width:85,
     height:26,
-    justifyContent: "center"
+    justifyContent: "center",
+    right:40
 
   },
   timerText: {
@@ -197,6 +198,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#000",
   },
+  abc:{
+    right:50
+  }
 });
 
 export default MyGroupsC2;

@@ -18,7 +18,7 @@ import Banner from '../../components/HomePage/Banner';
 import Promotedproducts from '../../components/HomePage/Promotedproducts';
 import ProductsItems from '../../components/HomePage/ProductsItems'
 import FilterSection from '../../components/HomePage/FilterSection'
-// import AppLoading from 'expo-app-loading'
+import AppLoading from 'expo-app-loading'
 import { useFonts } from 'expo-font'
 
 const screenWidth = Dimensions.get('window').width
@@ -31,9 +31,9 @@ const HomeScreen = () => {
 
   })
 
-  // if (!fontsLoaded) {
-  //   return <AppLoading />
-  // }
+  if (!fontsLoaded) {
+    return <AppLoading />
+  }
 
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
@@ -191,7 +191,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     height: 64,
-    gap: 10
+    gap: 10,
+    borderWidth:2
   },
   TopLog: {
     flexDirection: 'row',

@@ -5,7 +5,7 @@ import MyGroupsC2 from "../../components/MyGroupsPage/MyGroupsC2";
 
 const MyGroups = () => {
   return (
-    <View>
+    <View style={{justifyContent:'center'}}>
       <View>
         <MyGroupsComp1 />
       </View>

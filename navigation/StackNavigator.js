@@ -23,6 +23,9 @@ import OTPScreen from '../screens/HomePages/Modal/OTPScreen'
 import Accountcreate from '../screens/HomePages/Modal/Accountcreate'
 import RegisterScreen from '../screens/HomePages/Modal/RegisterScreen'
 import SplashScreen from '../components/Splash/SplashScreen';
+import FAQs from '../components/Morepage/FAQs'
+import Addresses from '../screens/Morepages/Addresses'
+import AddNewAddress from '../components/Morepage/address/AddNewAddress'
 
 
 
@@ -54,7 +57,7 @@ const StackNavigator = () => {
     return (
       <>
         <Tab.Navigator
-          screenOptions={{ keyboardHidesTabBar: true, style: { position: 'absolute' } }}>
+          screenOptions={{ keyboardHidesTabBar: true, style: { position: 'absolute', margin: 20 } }}>
           <Tab.Screen name="Home" component={HomeScreen}
             options={{
               tabBarLabel: ({ focused }) => (
@@ -111,7 +114,7 @@ const StackNavigator = () => {
               tabBarLabel: ({ focused }) => (
                 <Text style={{ fontSize: 10, color: focused ? "#347B72" : "#636767" }}>More</Text>
               ),
-              headerShown: true,
+              headerShown: false,
               tabBarIcon: ({ focused }) =>
                 focused ? (
                   <MoreIconActive name="More" width={24} />
@@ -128,7 +131,7 @@ const StackNavigator = () => {
 
         <Animated.View style={{
           width: getWidth() - 30,
-          height: 4,
+          height: 3.6,
           backgroundColor: '#347B72',
           position: 'absolute',
           borderTopLeftRadius: 0,
@@ -136,7 +139,7 @@ const StackNavigator = () => {
           borderBottomLeftRadius: 16,
           borderBottomRightRadius: 16,
           bottom: 45,
-          left: 14,
+          left: 16,
           transform: [{ translateX: tabOffsetValue }]
         }}
         />
@@ -155,6 +158,9 @@ const StackNavigator = () => {
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerShown: true }} />
         <Stack.Screen name="Wishlist" component={Wishlist} options={{ headerShown: true }} />
         <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: true }} />
+        <Stack.Screen name="FAQs" component={FAQs} options={{ headerShown: true }} />
+        <Stack.Screen name="Addresses" component={Addresses} options={{ headerShown: true }} />
+        <Stack.Screen name="AddNewAddress" component={AddNewAddress} options={{ headerShown: true,  headerTitle: 'Add New Address' }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
@@ -164,4 +170,4 @@ const StackNavigator = () => {
 
 export default StackNavigator
 
-//rnfes
+//rnfes  

@@ -1,6 +1,6 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import MyGroups from '../../screens/MainPages/MyGroups'
+import MyGroups from '../../assets/NavigationTab/GroupIconInactive.svg'
 import UserHeart from "../../assets/images/Mainpage/UserHeart.svg"
 import Trends from "../../assets/images/Mainpage/Trends.svg"
 
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 8,
     margin: 20,
+    
   },
   contains: {
     flexDirection: "row",

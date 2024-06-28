@@ -1,6 +1,5 @@
 import {
   StyleSheet,
-  Text,
   View,
   Pressable,
   TextInput,
@@ -14,7 +13,7 @@ const MyGroupsComp1 = () => {
   return (
     <SafeAreaView>
       <View style={{padding: 8}}>
-      <View style={{backgroundColor: "#ffff", height: 68,right:8,width:360}}>
+      <View style={{backgroundColor: "#ffff", height: 68,right:8,width:400}}>
         <Pressable style={styles.SearchBar}>
           <View style={styles.SearchBarInput}>
             <SearchIcon style={{ width: 20, height: 20 }} />
@@ -39,7 +38,7 @@ const MyGroupsComp1 = () => {
             borderColor: "#CBCDCD",
             alignSelf: "flex-end",
             bottom: 52,
-            right: 20,
+            right: 65,
             borderBlockColor: "#CBCDCD",
             alignItems: "center",
             justifyContent: "center"
@@ -87,3 +86,4 @@ const styles = StyleSheet.create({
 });
 
 export default MyGroupsComp1;
+  
