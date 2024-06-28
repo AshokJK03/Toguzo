@@ -54,15 +54,15 @@ const More = () => {
 				{/**support container */}
 				<Text style={{fontSize:20,fontWeight:600,backgroundColor:"#fff",paddingHorizontal:20,paddingVertical:16}}>Support</Text>
 				<View style={styles.supportContainer}>
-					<View style={styles.supportSections}>
-						<View style={styles.FAQs}>
+					<Pressable  onPress={() => navigation.navigate("FAQs")} style={styles.supportSections}>
+						<View  style={styles.FAQs}>
 							<BookIcon style={{width:24,height:24,marginRight:16}} />
 							<Text style={{fontSize:16, fontWeight:600,marginTop:5}}>FAQs</Text>
 						</View>
 						<View>
-							<Pressable><RightArrow onPress={() => navigation.navigate("FAQs")} style={{width:40,height:40}} /></Pressable>
+							<Pressable><RightArrow  /></Pressable>
 						</View>
-					</View>
+					</Pressable>
 				</View>
 				<View style={styles.supportContainer}>
 					<View style={styles.supportSections}>

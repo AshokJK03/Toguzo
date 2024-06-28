@@ -123,7 +123,10 @@ const Profile = () => {
           Settings
         </Text>
 
-        <View style={styles.addrSection}>
+        <Pressable
+          style={styles.addrSection}
+          onPress={() => navigation.navigate("Addresses")}
+        >
           <View style={styles.addrCont}>
             <View style={styles.addr}>
               <AddressIcon
@@ -133,12 +136,9 @@ const Profile = () => {
                 Addresses
               </Text>
             </View>
-            <Pressable>
-				
-              <RightArrow onPress={() => navigation.navigate('Addresses')} style={{height:40,width:40}}/>
-            </Pressable>
+            <RightArrow />
           </View>
-        </View>
+        </Pressable>
 
         <View style={styles.supportContainer}>
           <View style={styles.supportSections}>
