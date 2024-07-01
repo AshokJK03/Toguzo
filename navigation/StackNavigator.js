@@ -2,8 +2,6 @@ import { useRef, React } from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { KeyboardAvoidingView, Text, Animated, Dimensions } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
-import AppLoading from 'expo-app-loading'
-import { useFonts } from 'expo-font'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as NavigationBar from 'expo-navigation-bar';
@@ -28,15 +26,6 @@ import SplashScreen from '../components/Splash/SplashScreen';
 
 
 const StackNavigator = () => {
-  
-  let [fontsLoaded] = useFonts({
-    'Nunito-SemiBold': require('../assets/fonts/Nunito-SemiBold.ttf'),
-    'Nunito-Medium': require('../assets/fonts/Nunito-Medium.ttf'),
-  })
-
-  if (!fontsLoaded) {
-    return <AppLoading />
-  }
 
 
   NavigationBar.setBackgroundColorAsync("white");
@@ -164,7 +153,7 @@ const StackNavigator = () => {
           />
         </Tab.Navigator>
 
-        <Animated.View  style={{
+        <Animated.View style={{
           width: 64,
           height: 4,
           backgroundColor: '#347B72',

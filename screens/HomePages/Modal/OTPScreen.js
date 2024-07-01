@@ -127,7 +127,7 @@ export default function LoginScreen() {
             }}
             disabled={!isButtonEnabled}
           >
-            <Text style={{ color: isButtonEnabled ? "#F8F9F9" : '#B1B4B4', fontWeight: 600, fontFamily: "Nunito-SemiBold", fontSize: 16 }}>Verify</Text>
+            <Text style={{ color: isButtonEnabled ? "#F8F9F9" : '#B1B4B4', fontWeight: 600, fontFamily: "Nunito-SemiBold", fontSize: 16 }}>Verify Number</Text>
           </Pressable>
         </View>
       </View>
