@@ -192,7 +192,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 64,
     gap: 10,
-    borderWidth:2
   },
   TopLog: {
     flexDirection: 'row',

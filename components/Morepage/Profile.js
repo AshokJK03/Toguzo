@@ -120,7 +120,7 @@ const Profile = () => {
           }}
         >
           Settings
-        </Text>
+        </Text>  
 
         <Pressable
           style={styles.addrSection}
