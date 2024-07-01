@@ -1,6 +1,6 @@
 import { useRef, React } from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { KeyboardAvoidingView, Text, Animated, Dimensions } from 'react-native'
+import { KeyboardAvoidingView, Text, Animated, Dimensions , TouchableOpacity } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -25,6 +25,9 @@ import RegisterScreen from '../screens/HomePages/Modal/RegisterScreen'
 import SplashScreen from '../components/Splash/SplashScreen';
 import Profilepage from '../screens/Morepages/Profilepage';
 import FAQs from '../components/Morepage/FAQs';
+import About_us from '../components/Morepage/About_us'
+import Feedback from '../components/Morepage/Feedback'
+import FeedbackSuccessScreen from '../components/Morepage/FeedbackSuccessScreen'
 
 
 
@@ -163,6 +166,17 @@ const StackNavigator = () => {
         <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: true }} />
         <Stack.Screen name="Profilepage" component={Profilepage} options={{ headerShown: true }} />
         <Stack.Screen name="FAQs" component={FAQs} options={{ headerShown: true }} />
+        <Stack.Screen name="About_us" component={About_us} options={{ headerShown: true }} />
+        <Stack.Screen name="Feedback" component={Feedback} options={({ navigation }) => ({
+            headerShown: true,
+            headerRight: () => (
+              <TouchableOpacity onPress={() => navigation.navigate('FeedbackSuccessScreen')}>
+                <Text style={{ marginRight: 10, color: '#008E97' }}>Submit</Text>
+              </TouchableOpacity>
+            ),
+          })} />
+          <Stack.Screen name="FeedbackSuccessScreen" component={FeedbackSuccessScreen} options={{ headerShown: true }} />
+
 
       </Stack.Navigator>
     </NavigationContainer>
@@ -172,5 +186,3 @@ const StackNavigator = () => {
 
 
 export default StackNavigator
-
-//rnfes

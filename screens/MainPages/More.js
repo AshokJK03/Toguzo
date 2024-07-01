@@ -7,8 +7,9 @@ import RightArrow from "../../assets/images/Morepage/rightarrow.svg"
 import PencilIcon from "../../assets/images/Morepage/pencil.svg"
 import Iicon from "../../assets/images/Morepage/iIcon.svg"
 import FAQs from "../../components/Morepage/FAQs"
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native'
 import Profile from '../../components/Morepage/Profile'
+import About_us from '../../components/Morepage/About_us'
 
 
 const More = () => {
@@ -71,7 +72,7 @@ const More = () => {
 							<Text style={{fontSize:16, fontWeight:600,marginTop:5,}}>About us</Text>
 						</View>
 						<View>
-							<Pressable><RightArrow/></Pressable>
+						<Pressable><RightArrow onPress={() => navigation.navigate("About_us")} style={{width:40,height:40}} /></Pressable>
 						</View>
 					</View>
 				</View>
@@ -82,7 +83,7 @@ const More = () => {
 							<Text style={{fontSize:16, fontWeight:600,marginTop:5,}}>Give us feedback</Text>
 						</View>
 						<View>
-							<Pressable><RightArrow/></Pressable>
+						<Pressable><RightArrow onPress={() => navigation.navigate("Feedback")} style={{width:40,height:40}} /></Pressable>
 						</View>
 					</View>
 				</View>
