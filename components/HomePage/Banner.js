@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity } from 'react-native';
 import ImageSlider from 'react-native-image-slider';
-import banner1 from '../../assets/images/Homepage/SliderBanners/banner1.png';
+import bannerImage from '../../assets/images/Homepage/SliderBanners/bannerImage.jpeg';
 
 const Banner = () => {
   const listImage = [
-    banner1,
-    banner1,
-    banner1,
-    banner1,
+    bannerImage,
+    bannerImage,
+    bannerImage,
+    bannerImage,
   ];
 
   return (
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     height: 210,
     bottom: 10,
     backgroundColor: '#F2F3F3',
-    
+
   },
   customImage: {
     width: '100%',
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    height:8,
+    height: 8,
   },
   dot: {
     width: 8,

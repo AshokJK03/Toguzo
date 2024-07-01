@@ -11,48 +11,51 @@ const BrandCar = () => {
   return (
     <View style={{ marginTop: 8, height: 122 }}>
       <Image
-        source={require('../../assets/images/Mainpage/ToguzoCar.gif')}
+        source={require('../../assets/images/Mainpage/Toguzo3Car.gif')}
         style={styles.image}
       />
-      {/* <Logo width={25} style={styles.Logocar} />
-      <View style={{ flexDirection: 'row', height: 30, marginTop: 20, width: 339, justifyContent: 'center', margin: 20, paddingEnd: 10, }}>
-        <View style={{
-          flex: 1,
-          flexDirection: 'row',
-          width: 97,
-        }}>
-          <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 5 }}>
-            <View style={styles.BrandAssured}>
-              <PriceTag width={16} />
+      <Logo width={25} style={styles.Logocar} />
+      <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+        <View style={{ flexDirection: 'row',  marginTop: 16, alignItems: 'center', width: 339, paddingStart: 10 }}>
+          <View style={{
+            flexDirection: 'row',
+            flex: 1,
+            width: 90,
+          }}>
+            <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 5 }}>
+              <View style={styles.BrandAssured}>
+                <PriceTag width={16} />
+              </View>
+              <Text style={{ fontSize: 10, fontWeight: 600, width: 65, fontFamily: "Nunito-Bold", }}>Group buy for lowest price</Text>
             </View>
-            <Text style={{ fontSize: 9, fontWeight: 600, padding: 0, width: 75, fontFamily: "Nunito-Bold", }}>Group buy for lowest price</Text>
+          </View>
+          <View style={{
+            flexDirection: 'row',
+            flex: 1,
+            right: 2,
+            width: 106
+          }} >
+            <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 5 }}>
+              <View style={styles.BrandAssured}>
+                <VerifiedCheck width={16} />
+              </View>
+              <Text style={{ fontSize: 10, fontWeight: 600, width: 74, fontFamily: "Nunito-Bold" }}>Quality assured products</Text>
+            </View>
+          </View>
+          <View style={{
+            flexDirection: 'row',
+            flex: 1,
+            width: 96
+          }}>
+            <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 5 }}>
+              <View style={styles.BrandAssured}>
+                <RefreshLogo width={16} />
+              </View>
+              <Text style={{ fontSize: 10, fontWeight: 600, width: 64, fontFamily: "Nunito-Bold" }}>Easy Returns & Refund</Text>
+            </View>
           </View>
         </View>
-        <View style={{
-          flexDirection: 'row',
-          right: 12,
-          width: 106
-        }} >
-          <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 5 }}>
-            <View style={styles.BrandAssured}>
-              <VerifiedCheck width={16} />
-            </View>
-            <Text style={{ fontSize: 9, fontWeight: 600, padding: 0, width: 85, fontFamily: "Nunito-Bold" }}>Quality assured products</Text>
-          </View>
-        </View>
-        <View style={{
-          flexDirection: 'row',
-          gap: 5,
-          width: 96
-        }}>
-          <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 5 }}>
-            <View style={styles.BrandAssured}>
-              <RefreshLogo width={16} />
-            </View>
-            <Text style={{ fontSize: 9, fontWeight: 600, width: 75, fontFamily: "Nunito-Bold" }}>Easy Returns & Refund</Text>
-          </View>
-        </View>
-      </View> */}
+      </View>
     </View>
   )
 }
@@ -84,14 +87,12 @@ const styles = StyleSheet.create({
     height: 127,
     resizeMode: 'contain',
     position: 'absolute',
-    //right:52
-    //left: -(screenWidth * 0.20),
   },
   Logocar: {
     position: 'absolute',
-    bottom: 20,
-    right: 195
-    //right: screenWidth - 208
+    left: screenWidth - 248,
+    bottom: 16,
+   // right: screenWidth - 208
   },
 
 })

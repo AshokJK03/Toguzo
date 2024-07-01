@@ -2,14 +2,14 @@ import { StyleSheet, Text, View, Pressable, TextInput, SafeAreaView } from "reac
 import React, { useState } from "react";
 import MyGroupsC2 from "../../components/MyGroupsPage/MyGroupsC2";
 import SearchIcon from "../../assets/images/Mainpage/SearchIcon.svg";
-// import Filter from "../../assets/images/MyGroupsPage/Filter.svg";
-// import CancelIcon from "../../assets/images/Homepage/ModalScreen/CancelIcon.svg"
-// import { BottomModal, SlideAnimation, ModalContent, ModalPortal } from 'react-native-modals'
-// import StatusFilter from "../../components/MyGroupsPage/Modal/StatusFilter";
+import Filter from "../../assets/images/MyGroupsPage/Filter.svg";
+import CancelIcon from "../../assets/images/Homepage/ModalScreen/CancelIcon.svg"
+import { BottomModal, SlideAnimation, ModalContent, ModalPortal } from 'react-native-modals'
+import StatusFilter from "../../components/MyGroupsPage/Modal/StatusFilter";
 
 const MyGroups = () => {
 
-  // const [modalfilter, setModalfilter] = useState(false)
+  const [modalfilter, setModalfilter] = useState(false)
 
   return (
     <>
@@ -45,9 +45,9 @@ const MyGroups = () => {
                 alignItems: "center",
                 justifyContent: "center"
               }}>
-              {/* <Pressable>
-                <Filter onPress={() => setModalfilterMyGroups(!modalfilterMyGroups)} />
-              </Pressable> */}
+              <Pressable>
+                <Filter onPress={() => setModalfilter(!modalfilter)} />
+              </Pressable>
             </Pressable>
           </View>
         </View>

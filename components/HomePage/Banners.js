@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import banner1 from '../../assets/images/Homepage/SliderBanners/banner1.png';
+import bannerImage from '../../assets/images/Homepage/SliderBanners/bannerImage.jpeg';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -9,9 +9,9 @@ const Banners = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const listImage = [
-    banner1,
-    banner1,
-    banner1
+    bannerImage,
+    bannerImage,
+    bannerImage
   ];
 
   const renderItem = ({ item }) => {

@@ -24,9 +24,7 @@ import Accountcreate from '../screens/HomePages/Modal/Accountcreate'
 import SplashScreen from '../components/Splash/SplashScreen';
 
 
-
 const StackNavigator = () => {
-
 
   NavigationBar.setBackgroundColorAsync("white");
   const Stack = createNativeStackNavigator();
@@ -176,7 +174,7 @@ const StackNavigator = () => {
       <StatusBar backgroundColor="white" barStyle="dark-content" />
       <Stack.Navigator initialRouteName='Splash'>
         <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Main" component={BottomTabs} options={{ headerShown: false }} />
+        <Stack.Screen name="Main" component={BottomTabs} options={{ headerShown: false, tabBarVisible: false }} />
         <Stack.Screen name="AccountCreate" component={Accountcreate} options={{ headerShown: true, headerTitle: '' }} />
         <Stack.Screen name="OTPScreen" component={OTPScreen} options={{ headerShown: true, headerTitle: '' }} />
         <Stack.Screen name="Wishlist" component={Wishlist} options={{ headerShown: true }} />

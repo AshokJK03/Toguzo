@@ -19,16 +19,14 @@ export default function LoginScreen() {
       <View style={{ flex: 1, backgroundColor: "white", }}>
         <View style={{ margin: 20 }}>
           <View>
-            <Text style={{ fontWeight: 600, fontSize: 20, fontFamily: "Nunito-SemiBold" }}>Verify with OTP</Text>
+            <Text style={{ fontWeight: 600, fontSize: 20, fontFamily: "Nunito-SemiBold", lineHeight:30 }}>Verify with OTP</Text>
           </View>
-          <View style={{ height: 229, marginTop: 24 }}>
+          <View style={{ height: 229, marginTop: 24, }}>
             <Text style={{ fontWeight: 500, fontFamily: "Nunito-Medium", fontSize: 16 }}>
               Sent via SMS to
-              <Text style={{ fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>
-                xxxxxxxx
-              </Text>
+              <Text style={{ fontWeight: 600, fontFamily: "Nunito-SemiBold", lineHeight:24 }}> 91xxxxxx89</Text> 
             </Text>
-            <View style={{ height: 45, marginTop: 40, width: 212 }}>
+            <View style={{ height: 45, marginTop: 40, width: 190 }}>
               <OtpInput
                 numberOfDigits={4}
                 onContentType="oneTimeCode" // for IOS
@@ -42,7 +40,8 @@ export default function LoginScreen() {
                     borderColor: '#70C2B7',
                     borderRadius: 5,
                     width: 35,
-                    height: 45,
+                    height: 40,
+                    
 
                   }
                 }}
@@ -55,7 +54,8 @@ export default function LoginScreen() {
                   fontWeight: 500,
                   fontFamily: "Nunito-Medium",
                   fontSize: 14,
-                  marginTop: 8
+                  marginTop: 8,
+                  lineHeight:20
                 }}>
                 Trying to autofill OTP
               </Text>
@@ -66,6 +66,7 @@ export default function LoginScreen() {
                   fontFamily: "Nunito-Bold",
                   fontSize: 14,
                   marginTop: 8,
+                  lineHeight:20
                 }}>
                 Timer
               </Text>
@@ -76,7 +77,8 @@ export default function LoginScreen() {
                   fontWeight: 500,
                   fontFamily: "Nunito-Medium",
                   fontSize: 14,
-                  marginTop: 24
+                  marginTop: 24,
+                  lineHeight:20
                 }}>
                 Did not receive OTP ?
               </Text>
@@ -87,6 +89,7 @@ export default function LoginScreen() {
                   fontFamily: "Nunito-Bold",
                   fontSize: 14,
                   marginTop: 24,
+                  lineHeight:20
                 }} onPress={() => console.log("hi")}>
                 Resend
               </Text>
@@ -98,6 +101,7 @@ export default function LoginScreen() {
                   fontFamily: "Nunito-Medium",
                   fontSize: 14,
                   marginTop: 16,
+                  lineHeight:20
                 }}>
                 Having Issues ?
               </Text>
@@ -108,6 +112,7 @@ export default function LoginScreen() {
                   fontFamily: "Nunito-Bold",
                   fontSize: 14,
                   marginTop: 16,
+                  lineHeight:20
                 }} onPress={() => console.log("help")}>
                 Get Help
               </Text>

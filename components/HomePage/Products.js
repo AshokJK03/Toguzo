@@ -12,13 +12,17 @@ import product9 from '../../assets/images/Homepage/Products/product9.jpeg'
 import product10 from '../../assets/images/Homepage/Products/product10.jpeg'
 import product11 from '../../assets/images/Homepage/Products/product11.jpeg'
 import { scale } from 'react-native-size-matters'
+import { useNavigation } from '@react-navigation/native';
 
 const Products = () => {
+  const navigation = useNavigation();
+
   const list = [
     {
       id: "0",
       img: product1,
-      name: "Grocery"
+      name: "Grocery",
+      component: 'Wishlist'
     },
     {
       id: "1",
@@ -77,7 +81,7 @@ const Products = () => {
       <View style={styles.ProductTop}>
         <View style={styles.Products}>
           {list.map((item, index) => (
-            <Pressable key={index} style={{ justifyContent: 'center', alignItems: 'center', width: 60, height: 82, }}>
+            <Pressable key={index} style={{ justifyContent: 'center', alignItems: 'center', width: 60, height: 82, }} onPress={() => navigation.navigate(item.component)}>
               <View>
                 <Image source={item.img}
                   style={styles.productview} />
@@ -98,8 +102,8 @@ const styles = StyleSheet.create({
     height: 98,
     justifyContent: 'center',
     alignItems: 'center',
-
   },
+
   Products: {
     backgroundColor: 'white',
     justifyContent: 'center',
@@ -109,8 +113,10 @@ const styles = StyleSheet.create({
     width: scale(-80),
     paddingEnd: 20,
     paddingStart: 20,
-    gap: 8
+    gap: 8,
+  
   },
+
   productview: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -122,6 +128,7 @@ const styles = StyleSheet.create({
     borderColor: '#CBCDCD',
 
   },
+
   ProductImage: {
     borderRadius: 50,
     height: 25,

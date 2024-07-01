@@ -16,10 +16,10 @@ const Searchbar = () => {
           style={{ flex: 1, fontWeight: 'normal', fontFamily: 'Nunito-Medium' }}
           placeholderTextColor={'#7C7E7E'}
         />
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        {/* <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
           <Camera style={{ width: 20, height: 20 }} />
           <Microphone width={20} height={20} />
-        </View>
+        </View> */}
       </View>
     </Pressable>
   )

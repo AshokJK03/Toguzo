@@ -16,21 +16,21 @@ const Accountcreate = ({ navigation }) => {
     <KeyboardAvoidingView style={{ flex: 1 }}>
       <View style={{ flex: 1, backgroundColor: "white", }}>
         <View style={{ margin: 20 }}>
-          <Text style={{ fontSize: 20, fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>Set up your account</Text>
+          <Text style={{ fontSize: 20, fontWeight: 600, fontFamily: "Nunito-SemiBold", lineHeight:30 }}>Set up your account</Text>
           <View style={{ marginTop: 24 }}>
-            <Text style={{ fontWeight: 600, fontSize: 20, fontFamily: "Nunito-SemiBold" }}>Gender</Text>
+            <Text style={{ fontWeight: 600, fontSize: 20, fontFamily: "Nunito-SemiBold", lineHeight:30 }}>Gender</Text>
             <View style={styles.gender}>
               <Pressable style={[styles.maleContain, { borderColor: selectgender === 'Male' ? "#1570EF" : '#CBCDCD' }]} onPress={() => setSelectgender("Male")}>
                 < MaleIcon />
-                <Text style={{ fontSize: 16, color: selectgender === 'Male' ? "#1570EF" : '#212121', fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>Male</Text>
+                <Text style={{ fontSize: 16, color: selectgender === 'Male' ? "#1570EF" : '#212121', fontWeight: 600, fontFamily: "Nunito-SemiBold", lineHeight:24 }}>Male</Text>
               </Pressable>
               <Pressable style={[styles.femalecontain, { borderColor: selectgender === 'Female' ? "#DD2590" : '#CBCDCD' }]} onPress={() => setSelectgender("Female")}>
                 < FemaleIcon />
-                <Text style={{ fontSize: 16, color: selectgender === 'Female' ? "#DD2590" : '#212121', fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>Female</Text>
+                <Text style={{ fontSize: 16, color: selectgender === 'Female' ? "#DD2590" : '#212121', fontWeight: 600, fontFamily: "Nunito-SemiBold", lineHeight:24 }}>Female</Text>
               </Pressable>
             </View>
             <View style={{ marginTop: 24 }}>
-              <Text style={{ fontSize: 20, color: '#212121', fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>What Should We Call You?</Text>
+              <Text style={{ fontSize: 20, color: '#212121', fontWeight: 600, fontFamily: "Nunito-SemiBold", lineHeight:30 }}>What Should We Call You?</Text>
               <View style={styles.NameBar}>
                 <TextInput
                   placeholder="Max"
@@ -41,7 +41,7 @@ const Accountcreate = ({ navigation }) => {
               </View>
             </View>
             <View style={{ marginTop: 24 }}>
-              <Text style={{ fontSize: 20, color: '#212121', fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>Email</Text>
+              <Text style={{ fontSize: 20, color: '#212121', fontWeight: 600, fontFamily: "Nunito-SemiBold", lineHeight:30 }}>Email</Text>
               <View style={styles.NameBar}>
                 <MailIcon style={{ width: 20, height: 20 }} />
                 <TextInput
@@ -61,7 +61,7 @@ const Accountcreate = ({ navigation }) => {
               padding: 12,
               height: 48,
               alignItems: 'center',
-              marginTop: 200,
+              marginTop: 240,
             }}
             onPress={() => {
               userState.setUser(() => (UserContext.user))
@@ -95,6 +95,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 24,
     gap: 16,
+  },
+  GenderText: {
+    fontWeight: 600, 
+    fontSize: 20, 
+    fontFamily: "Nunito-SemiBold", 
+    lineHeight:30
   },
   maleContain: {
     flexDirection: "row",

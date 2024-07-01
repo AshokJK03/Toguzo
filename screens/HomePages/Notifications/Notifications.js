@@ -13,7 +13,8 @@ const Notifications = ({navigation}) => {
       <View style={{ alignItems: 'center', justifyContent: 'center',marginTop: 30 }}>
         <Text style={{ fontSize: 20, fontWeight: 700, fontFamily: "Nunito-Bold"}}>No Notification</Text>
       </View>
-      <View style={{marginTop: 16, height:24}}>
+      <View style={{marginTop: 16, height:24, justifyContent:'center', alignItems:'center'
+      }}>
         <Text style={{ fontSize: 16, color: '#7C7E7E', fontWeight: 500, fontFamily: "Nunito-Medium" }}>There is no notification to show right now.</Text>
       </View>
       <View style={{ justifyContent: 'flex-end', margin: 20, flex: 1 }}>

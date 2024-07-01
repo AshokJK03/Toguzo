@@ -10,7 +10,7 @@ import Phone from '../../assets/images/Homepage/ModalScreen/Phone.svg'
 import Products from '../../components/HomePage/Products'
 import { useNavigation } from '@react-navigation/native';
 import BrandCar from '../../components/HomePage/BrandCar';
-import Banner from '../../components/HomePage/Banner';
+// import Banner from '../../components/HomePage/Banner';
 import Promotedproducts from '../../components/HomePage/Promotedproducts';
 import FilterSection from '../../components/HomePage/FilterSection'
 import Searchbar from '../../components/HomePage/Searchbar'
@@ -112,7 +112,7 @@ const HomeScreen = () => {
 
           {/* Banner */}
 
-          <Banner />
+          {/* <Banner /> */}
 
           {/* Banner */}
 
@@ -124,7 +124,12 @@ const HomeScreen = () => {
             backgroundColor: '#F2F3F3'
           }} />
           
+          {/* Promoted Products */}
+
           <Promotedproducts />
+
+          {/* Promoted Products */}
+
           <Text style={{
             borderColor: '#F2F3F3',
             height: 1,
@@ -156,7 +161,9 @@ const HomeScreen = () => {
               <View style={{ width: 48, height: 48, alignItems: 'center', justifyContent: 'center' }}>
                 <Logo width={34} height={34} />
               </View>
-              <Text style={{ fontWeight: 600, fontSize: 20, color: '#212121', fontFamily: 'Nunito-SemiBold' }}>Toguzo</Text>
+              <View style={{justifyContent:'center', alignItems: 'center'}}>
+              <Text style={{ fontWeight: 600, fontSize: 24, color: '#212121', fontFamily: 'Nunito-SemiBold' }}>Toguzo</Text>
+              </View>
             </View>
             <View style={{ width: 48, height: 48, alignItems: 'center', justifyContent: 'center', }}>
               <CancelIcon width={24} onPress={() => setModalVisible(!modalVisible)} />
