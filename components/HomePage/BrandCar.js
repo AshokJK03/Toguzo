@@ -11,15 +11,15 @@ const BrandCar = () => {
   return (
     <View style={{ marginTop: 8, height: 122 }}>
       <Image
-        source={require('../../assets/images/Mainpage/car.gif')}
+        source={require('../../assets/images/Mainpage/ToguzoCar.gif')}
         style={styles.image}
       />
-      <Logo width={25} style={styles.Logocar} />
-      <View style={{ flexDirection: 'row', height: 30, marginTop: 20, width: 339, justifyContent: 'center', margin: 20, paddingEnd: 10, }}>
+      {/* <Logo width={25} style={styles.Logocar} /> */}
+      {/* <View style={{ flexDirection: 'row', height: 30, marginTop: 20, width: 339, justifyContent: 'center', margin: 20, paddingEnd: 10, }}>
         <View style={{
           flex: 1,
           flexDirection: 'row',
-          width: 97, 
+          width: 97,
         }}>
           <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 5 }}>
             <View style={styles.BrandAssured}>
@@ -52,7 +52,7 @@ const BrandCar = () => {
             <Text style={{ fontSize: 9, fontWeight: 600, width: 75, fontFamily: "Nunito-Bold" }}>Easy Returns & Refund</Text>
           </View>
         </View>
-      </View>
+      </View> */}
     </View>
   )
 }

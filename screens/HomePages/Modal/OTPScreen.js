@@ -120,7 +120,7 @@ export default function LoginScreen() {
               padding: 12,
               height: 48,
               alignItems: 'center',
-              marginTop: 300,
+              marginTop: 325,
             }}
             onPress={() => {
               navigation.navigate("AccountCreate");

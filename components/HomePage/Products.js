@@ -28,7 +28,7 @@ const Products = () => {
     {
       id: "2",
       img: product3,
-      name: "Beauty&personal care"
+      name: "Beauty & personal care"
     },
     {
       id: "3",
@@ -110,7 +110,6 @@ const styles = StyleSheet.create({
     paddingEnd: 20,
     paddingStart: 20,
     gap: 8
-
   },
   productview: {
     alignItems: 'center',
