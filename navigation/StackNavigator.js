@@ -2,17 +2,19 @@ import { useRef, React } from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { KeyboardAvoidingView, Text, Animated, Dimensions } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
+import AppLoading from 'expo-app-loading'
+import { useFonts } from 'expo-font'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as NavigationBar from 'expo-navigation-bar';
-import HomeIconActive from '../assets/NavigationTab/HomeIconActive.svg'
-import HomeIconInactive from '../assets/NavigationTab/HomeIconInactive.svg'
-import ReelsIconActive from '../assets/NavigationTab/ReelsIconActive.svg'
-import ReelsIconInactive from '../assets/NavigationTab/ReelsIconInactive.svg'
-import MoreIconActive from '../assets/NavigationTab/MoreIconActive.svg'
-import MoreIconInactive from '../assets/NavigationTab/MoreIconInactive.svg'
-import GroupIconActive from '../assets/NavigationTab/GroupIconActive.svg'
-import GroupsIconInactive from '../assets/NavigationTab/GroupIconInactive.svg'
+import HomeIconActive from '../assets/images/NavigationTab/HomeIconActive.svg'
+import HomeIconInactive from '../assets/images/NavigationTab/HomeIconInactive.svg'
+import ReelsIconActive from '../assets/images/NavigationTab/ReelsIconActive.svg'
+import ReelsIconInactive from '../assets/images/NavigationTab/ReelsIconInactive.svg'
+import MoreIconActive from '../assets/images/NavigationTab/MoreIconActive.svg'
+import MoreIconInactive from '../assets/images/NavigationTab/MoreIconInactive.svg'
+import GroupIconActive from '../assets/images/NavigationTab/GroupIconActive.svg'
+import GroupsIconInactive from '../assets/images/NavigationTab/GroupIconInactive.svg'
 import HomeScreen from '../screens/MainPages/HomeScreen'
 import Wishlist from '../screens/HomePages/Wishlists/Wishlist';
 import Notifications from '../screens/HomePages/Notifications/Notifications';
@@ -21,12 +23,21 @@ import MyGroups from '../screens/MainPages/MyGroups';
 import More from '../screens/MainPages/More';
 import OTPScreen from '../screens/HomePages/Modal/OTPScreen'
 import Accountcreate from '../screens/HomePages/Modal/Accountcreate'
-import RegisterScreen from '../screens/HomePages/Modal/RegisterScreen'
 import SplashScreen from '../components/Splash/SplashScreen';
 
 
 
 const StackNavigator = () => {
+  
+  let [fontsLoaded] = useFonts({
+    'Nunito-SemiBold': require('../assets/fonts/Nunito-SemiBold.ttf'),
+    'Nunito-Medium': require('../assets/fonts/Nunito-Medium.ttf'),
+  })
+
+  if (!fontsLoaded) {
+    return <AppLoading />
+  }
+
 
   NavigationBar.setBackgroundColorAsync("white");
   const Stack = createNativeStackNavigator();
@@ -54,11 +65,24 @@ const StackNavigator = () => {
     return (
       <>
         <Tab.Navigator
-          screenOptions={{ keyboardHidesTabBar: true, style: { position: 'absolute' } }}>
+          screenOptions={{
+            tabBarHideOnKeyboard: true,
+            tabBarStyle: {
+              position: 'absolute',
+              height: 62,
+              paddingBottom: 8,
+              paddingTop: 10
+            }
+          }}>
           <Tab.Screen name="Home" component={HomeScreen}
             options={{
               tabBarLabel: ({ focused }) => (
-                <Text style={{ fontSize: 10, color: focused ? "#347B72" : "#636767" }}>Home</Text>
+                <Text style={{
+                  fontSize: 12,
+                  color: focused ? "#347B72" : "#636767",
+                  fontWeight: focused ? 600 : 500,
+                  fontFamily: focused ? 'Nunito-SemiBold' : 'Nunito-Medium'
+                }}>Home</Text>
               ),
               headerShown: false,
               tabBarIcon: ({ focused }) =>
@@ -75,7 +99,12 @@ const StackNavigator = () => {
           <Tab.Screen name="Reels" component={Reels}
             options={{
               tabBarLabel: ({ focused }) => (
-                <Text style={{ fontSize: 10, color: focused ? "#347B72" : "#636767" }}>Reels</Text>
+                <Text style={{
+                  fontSize: 12,
+                  color: focused ? "#347B72" : "#636767",
+                  fontWeight: focused ? 600 : 500,
+                  fontFamily: focused ? 'Nunito-SemiBold' : 'Nunito-Medium'
+                }}>Reels</Text>
               ),
               headerShown: false,
               tabBarIcon: ({ focused }) =>
@@ -92,7 +121,12 @@ const StackNavigator = () => {
           <Tab.Screen name="MyGroups" component={MyGroups}
             options={{
               tabBarLabel: ({ focused }) => (
-                <Text style={{ fontSize: 10, color: focused ? "#347B72" : "#636767" }}>MyGroups</Text>
+                <Text style={{
+                  fontSize: 12,
+                  color: focused ? "#347B72" : "#636767",
+                  fontWeight: focused ? 600 : 500,
+                  fontFamily: focused ? 'Nunito-SemiBold' : 'Nunito-Medium'
+                }}>MyGroups</Text>
               ),
               headerShown: true,
               tabBarIcon: ({ focused }) =>
@@ -109,9 +143,14 @@ const StackNavigator = () => {
           <Tab.Screen name="More" component={More}
             options={{
               tabBarLabel: ({ focused }) => (
-                <Text style={{ fontSize: 10, color: focused ? "#347B72" : "#636767" }}>More</Text>
+                <Text style={{
+                  fontSize: 12,
+                  color: focused ? "#347B72" : "#636767",
+                  fontWeight: focused ? 600 : 500,
+                  fontFamily: focused ? 'Nunito-SemiBold' : 'Nunito-Medium'
+                }}>More</Text>
               ),
-              headerShown: true,
+              headerShown: false,
               tabBarIcon: ({ focused }) =>
                 focused ? (
                   <MoreIconActive name="More" width={24} />
@@ -125,9 +164,8 @@ const StackNavigator = () => {
           />
         </Tab.Navigator>
 
-
-        <Animated.View style={{
-          width: getWidth() - 30,
+        <Animated.View  style={{
+          width: 64,
           height: 4,
           backgroundColor: '#347B72',
           position: 'absolute',
@@ -135,7 +173,7 @@ const StackNavigator = () => {
           borderTopRightRadius: 0,
           borderBottomLeftRadius: 16,
           borderBottomRightRadius: 16,
-          bottom: 45,
+          bottom: 58,
           left: 14,
           transform: [{ translateX: tabOffsetValue }]
         }}
@@ -152,7 +190,6 @@ const StackNavigator = () => {
         <Stack.Screen name="Main" component={BottomTabs} options={{ headerShown: false }} />
         <Stack.Screen name="AccountCreate" component={Accountcreate} options={{ headerShown: true, headerTitle: '' }} />
         <Stack.Screen name="OTPScreen" component={OTPScreen} options={{ headerShown: true, headerTitle: '' }} />
-        <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerShown: true }} />
         <Stack.Screen name="Wishlist" component={Wishlist} options={{ headerShown: true }} />
         <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: true }} />
       </Stack.Navigator>

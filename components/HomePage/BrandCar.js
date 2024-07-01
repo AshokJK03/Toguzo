@@ -7,34 +7,50 @@ import PriceTag from '../../assets/images/Mainpage/PriceTag.svg'
 
 const screenWidth = Dimensions.get('window').width
 const BrandCar = () => {
+
   return (
     <View style={{ marginTop: 8, height: 122 }}>
-      {/* changes done */}
       <Image
         source={require('../../assets/images/Mainpage/car.gif')}
         style={styles.image}
       />
       <Logo width={25} style={styles.Logocar} />
-      {/* <Logo 
-      style={{position:'absolute', top: 50, left: 50, transform: [{ translateX: 32 }, { translateY: 40 }]}} /> */}
-      <View style={{ flexDirection: 'row', height: 28, marginTop: 20, margin: 7  }}>
-        <View style={styles.BrandTop}>
-          <View style={styles.BrandAssured}>
-            <PriceTag width={24} />
+      <View style={{ flexDirection: 'row', height: 30, marginTop: 20, width: 339, justifyContent: 'center', margin: 20, paddingEnd: 10, }}>
+        <View style={{
+          flex: 1,
+          flexDirection: 'row',
+          width: 97, 
+        }}>
+          <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 5 }}>
+            <View style={styles.BrandAssured}>
+              <PriceTag width={16} />
+            </View>
+            <Text style={{ fontSize: 9, fontWeight: 600, padding: 0, width: 75, fontFamily: "Nunito-Bold", }}>Group buy for lowest price</Text>
           </View>
-          <Text style={{ fontSize: 8, fontWeight: 700, padding: 0, width: 65 }}>Group buy for lowest price</Text>
         </View>
-        <View style={styles.BrandTop}>
-          <View style={styles.BrandAssured}>
-            <VerifiedCheck width={24} />
+        <View style={{
+          flexDirection: 'row',
+          right: 12,
+          width: 106
+        }} >
+          <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 5 }}>
+            <View style={styles.BrandAssured}>
+              <VerifiedCheck width={16} />
+            </View>
+            <Text style={{ fontSize: 9, fontWeight: 600, padding: 0, width: 85, fontFamily: "Nunito-Bold" }}>Quality assured products</Text>
           </View>
-          <Text style={{ fontSize: 8, fontWeight: 700, padding: 0, width: 75 }}>Quality assured products</Text>
         </View>
-        <View style={styles.BrandTop}>
-          <View style={styles.BrandAssured}>
-            <RefreshLogo width={24} />
+        <View style={{
+          flexDirection: 'row',
+          gap: 5,
+          width: 96
+        }}>
+          <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 5 }}>
+            <View style={styles.BrandAssured}>
+              <RefreshLogo width={16} />
+            </View>
+            <Text style={{ fontSize: 9, fontWeight: 600, width: 75, fontFamily: "Nunito-Bold" }}>Easy Returns & Refund</Text>
           </View>
-          <Text style={{ fontSize: 8, fontWeight: 700, padding: 0, width: 65 }}>Easy Returns & Refund</Text>
         </View>
       </View>
     </View>
@@ -50,14 +66,18 @@ const styles = StyleSheet.create({
     height: 24,
     borderRadius: 50,
     backgroundColor: '#3D8F84',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   BrandTop: {
     flex: 1,
     flexDirection: 'row',
     gap: 5,
-    left: 14,
+    paddingStart: 20,
+    paddingEnd: 20,
+    justifyContent: 'center',
+    borderWidth: 1
+
   },
   image: {
     width: screenWidth,
@@ -72,5 +92,6 @@ const styles = StyleSheet.create({
     bottom: 20,
     right: 195
     //right: screenWidth - 208
-  }
+  },
+
 })

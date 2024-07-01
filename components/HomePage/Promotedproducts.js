@@ -1,18 +1,14 @@
-import { StyleSheet, Text, View, ScrollView, Pressable, Image } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Pressable, Image, Dimensions } from 'react-native'
 import React from 'react'
-import { useFonts } from 'expo-font'
-import promoted1 from '../../assets/promoted/promoted1.png';
-import promoted2 from '../../assets/promoted/promoted2.png';
-import promoted4 from '../../assets/promoted/promoted4.png';
+import promoted1 from '../../assets/images/Homepage/Promoted/promoted1.png';
+import promoted2 from '../../assets/images/Homepage/Promoted/promoted2.jpeg';
+import promoted3 from '../../assets/images/Homepage/Promoted/promoted3.jpeg';
+import promoted4 from '../../assets/images/Homepage/Promoted/promoted4.jpeg';
+import promoted5 from '../../assets/images/Homepage/Promoted/promoted5.jpeg';
 
+const screenWidth = Dimensions.get('window').width
 const Promotedproducts = () => {
 
-  let [fontsLoaded] = useFonts({
-    'Nunito-SemiBold': require('../../assets/fonts/Nunito-SemiBold.ttf'),
-    'Nunito-Medium': require('../../assets/fonts/Nunito-Medium.ttf'),
-    'Nunito-Regular': require('../../assets/fonts/Nunito-Regular.ttf'),
-
-  })
 
   const deal = [
     {
@@ -30,47 +26,61 @@ const Promotedproducts = () => {
     },
     {
       id: '2',
-      title: 'Women\'s T-shirt',
-      des: 'shirts of women',
-      image: promoted4,
+      title: 'Roadster',
+      des: 'White T-shirt',
+      image: promoted3,
     },
     {
       id: '3',
-      title: 'Women\'s T-shirt',
-      des: 'shirts of women',
-      image: promoted1,
+      title: 'US POLO',
+      des: 'Skinny fit black Jeans',
+      image: promoted4,
     },
     {
       id: '4',
-      title: 'Women\'s T-shirt',
-      des: 'shirts of women',
-      image: promoted1,
+      title: 'Rajeshwari Jwels ',
+      des: 'Gold plated earings',
+      image: promoted5,
 
     }
   ]
 
   return (
-    <>
-      <Text style={{ fontSize: 20, fontWeight: 600, fontFamily: 'Nunito-SemiBold', margin: 20, marginBottom:10 }}>Promoted</Text>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ margin: 10, marginTop: 5 }}>
-        {deal.map((item, index) => (
-          <Pressable key={index} style={{ borderColor: '#E5E6E6', margin: 10, borderWidth: 1, borderRadius: 4, justifyContent: "center", alignItems: "center", padding:4}}>
-            <View style={{ justifyContent: "center", backgroundColor: 'white',  }}>
-              <Image
-                source={item.image}
-                style={{ width: 142, height: 142, borderRadius: 4, }}
-              />
-              <Text numberOfLines={1} style={{ fontSize: 12, marginTop: 8, fontWeight: 600, marginLeft:10 }}>{item.title}</Text>
-              <Text numberOfLines={1} style={{fontSize: 12, fontWeight: 400, color: '#7C7E7E', marginBottom:10, marginLeft:10 }}>{item.des}</Text>
-            </View>
-          </Pressable>
-        ))}
+    <View style={{ height: 283, marginTop: 16 }}>
+      <Text style={{ fontSize: 20, fontWeight: 600, fontFamily: 'Nunito-SemiBold', marginBottom: 10, left: 20 }}>Promoted</Text>
+      <View style={{ marginTop: 16, height: 200, paddingEnd: 20, }}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} >
+          {deal.map((item, index) => (
+            <Pressable key={index} style={styles.container}>
+              <View style={{ justifyContent: "center"}}>
+                  <Image
+                    source={item.image}
+                    style={{ width: 142, height: 142, borderRadius: 4, marginTop: 5 }}
+                  />
+                <Text numberOfLines={1} style={{ fontSize: 12, marginTop: 8, fontWeight: 600, marginLeft: 10 }}>{item.title}</Text>
+                <Text numberOfLines={1} style={{ fontSize: 12, fontWeight: 400, color: '#7C7E7E', marginBottom: 10, marginLeft: 10 }}>{item.des}</Text>
+              </View>
+            </Pressable>
+          ))}
 
-      </ScrollView>
-    </>
+        </ScrollView>
+      </View>
+    </View>
   )
 }
 
 export default Promotedproducts
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    borderColor: '#E5E6E6',
+    borderWidth: 1,
+    borderRadius: 4,
+    justifyContent: "center",
+    alignItems: "center",
+    height: 200,
+    width: 150,
+    marginLeft: 20,
+
+  }
+})

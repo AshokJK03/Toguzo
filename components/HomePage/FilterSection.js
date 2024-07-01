@@ -1,6 +1,6 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import MyGroups from '../../screens/MainPages/MyGroups'
+import MyGroups from '../../assets/images/NavigationTab/GroupIconInactive.svg'
 import UserHeart from "../../assets/images/Mainpage/UserHeart.svg"
 import Trends from "../../assets/images/Mainpage/Trends.svg"
 
@@ -10,7 +10,7 @@ const FilterSection = () => {
       showsHorizontalScrollIndicator={false}>
       <Pressable style={styles.container}>
         <View style={styles.contains}>
-          <MyGroups />
+          <MyGroups  />
           <Text style={{ fontSize: 14, fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>Group Buy</Text>
         </View>
         <View style={styles.contains}>
@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     gap: 8,
-    margin: 20,
+    padding: 5,
+    borderWidth: 1
   },
   contains: {
     flexDirection: "row",
