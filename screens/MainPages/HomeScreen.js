@@ -12,7 +12,6 @@ import { useNavigation } from '@react-navigation/native';
 import BrandCar from '../../components/HomePage/BrandCar';
 import Banner from '../../components/HomePage/Banner';
 import Promotedproducts from '../../components/HomePage/Promotedproducts';
-import ProductsItems from '../../components/HomePage/ProductsItems'
 import FilterSection from '../../components/HomePage/FilterSection'
 import Searchbar from '../../components/HomePage/Searchbar'
 import Statusbar from '../../components/HomePage/Statusbar'
@@ -133,7 +132,6 @@ const HomeScreen = () => {
             backgroundColor: '#F2F3F3'
           }} />
           <FilterSection />
-          <ProductsItems />
           <Text>Loading..</Text>
         </ScrollView>
       </SafeAreaView >
